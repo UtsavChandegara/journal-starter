@@ -81,7 +81,7 @@ async def analyze_journal_entry(
         ],
     )
 
-    content = response.choices[0].message.content
+    content = response.choices[0].message.content or "{}"
 
     result = json.loads(content)
 
